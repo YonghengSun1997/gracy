@@ -7,6 +7,12 @@
     <title>茜茜，生日快乐</title>
     <link rel="stylesheet" href="css/skystar.css">
     <style>
+        /* 整体页面样式 */
+        body {
+            margin: 0;
+            overflow: hidden; /* 隐藏溢出的内容 */
+        }
+
         /* 音符按钮样式 */
         #play-button {
             position: fixed;
@@ -18,6 +24,7 @@
             font-size: 30px;
             color: #E8F9FD;
             outline: none;
+            z-index: 2; /* 确保按钮在最上层 */
         }
 
         /* 音符旋转动画 */
@@ -35,42 +42,47 @@
             animation: spin 2s linear infinite;
         }
 
-        /* 视频样式 */
-        #videofilm {
+        /* 封面图片样式 */
+        .poster {
             position: absolute; /* 绝对定位 */
             top: 0; /* 放在顶部 */
             left: 0; /* 放在左侧 */
             width: 100%; /* 充满父元素 */
             height: 100%; /* 充满父元素 */
+            background-image: url('img/skystar3.jpg'); /* 背景图 */
+            background-size: cover; /* 保持比例填充 */
+            z-index: 0; /* 确保在视频下方 */
+        }
+
+        /* 视频样式 */
+        #videofilm {
+            position: absolute; /* 绝对定位 */
+            top: 50%; /* 垂直居中 */
+            left: 50%; /* 水平居中 */
+            width: auto; /* 让视频宽度自适应 */
+            height: 100%; /* 高度充满父元素 */
+            transform: translate(-50%, -50%); /* 调整位置以确保居中 */
             object-fit: cover; /* 保持比例填充 */
             z-index: 1; /* 设置层叠顺序，确保在图片上面 */
         }
 
-        /* 图片样式 */
-        .poster {
-            position: relative; /* 相对定位，作为视频的定位基础 */
-            z-index: 0; /* 确保图片在视频下方 */
+        /* 文本样式 */
+        .textone {
+            position: relative; /* 确保文本在视频上方 */
+            z-index: 2; /* 确保文本在最上层 */
+            text-align: center; /* 中心对齐 */
+            color: #E8F9FD; /* 文本颜色 */
         }
     </style>
 </head>
 <body>
-    <div class="poster">
-        <video id="videofilm" poster="img/skystar3.jpg" autoplay muted loop>
-            <source src="video/skystar.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
+    <div class="poster"></div> <!-- 封面图 -->
+    <video id="videofilm" poster="img/skystar3.jpg" autoplay muted loop>
+        <source src="video/skystar.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
     <div class="textone">
         <h1>茜茜，生日快乐</h1>
-    </div>
-    <div class="textthree">
-        <h1></h1>
-    </div>
-    <div class="texttwo">
-        <h1></h1>
-    </div>
-    <div class="textthree">
-        <h1></h1>
     </div>
     
     <audio id="audio" src="video/晴天.mp3" loop></audio>
@@ -78,7 +90,6 @@
     <!-- 音符图标按钮 -->
     <button id="play-button">🎵</button>
     
-    <div class="container"></div>
     <script src="js/skystar.js"></script>
 
     <script>
