@@ -18,12 +18,21 @@
             font-size: 30px;
             color: #E8F9FD;
             outline: none;
-            transition: transform 0.3s ease;
         }
 
-        /* 音符旋转效果 */
+        /* 音符旋转动画 */
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* 旋转效果 */
         #play-button.rotate {
-            transform: rotate(360deg);
+            animation: spin 2s linear infinite;
         }
     </style>
 </head>
@@ -50,7 +59,7 @@
     <script src="js/skystar.js"></script>
 
     <script>
-        // 播放音乐并旋转音符按钮
+        // 点击音符按钮，控制音乐播放和旋转效果
         document.getElementById('play-button').addEventListener('click', function() {
             const audio = document.getElementById('audio');
             if (audio.paused) {
@@ -58,7 +67,7 @@
                 this.classList.add('rotate'); // 添加旋转效果
             } else {
                 audio.pause();
-                this.classList.remove('rotate'); // 取消旋转效果
+                this.classList.remove('rotate'); // 停止旋转效果
             }
         });
     </script>
