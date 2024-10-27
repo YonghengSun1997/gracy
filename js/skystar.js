@@ -75,12 +75,6 @@ let textone = document.querySelector('.textone').querySelector('h1');
           texttwo.innerHTML = '';
       },28000)
       setTimeout(function(){
-        textone.innerHTML = '从前从前,有个人爱你很久';
-      },112500)
-      setTimeout(function(){
-        textone.innerHTML = '茜茜,生日快乐';
-      },112500)
-      setTimeout(function(){
         textone.innerHTML = '要一直好好的';
       },112500)
 
