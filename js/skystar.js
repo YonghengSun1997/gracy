@@ -65,7 +65,7 @@ let textone = document.querySelector('.textone').querySelector('h1');
       let textthree = document.querySelector('.textthree').querySelector('h1');
 
       setTimeout(function(){
-        textone.innerHTML = '茜茜，今晚的整片星空将为你一人闪烁';
+        textone.innerHTML = '今晚的整片星空将为你一人闪烁';
           textone.style.color = '#E8F9FD';
           textone.style.fontFamily = '楷体';
           texttwo.innerHTML = '';
