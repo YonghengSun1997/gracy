@@ -14,6 +14,8 @@ var words=[
     '好想回到那个夏天',
     '趴在桌子上偷偷看你',
     '偷偷表白茜茜',
+    '谢谢你和我在一起',
+    '要一直好好的',
     '你曾是我灰色人生中的一道彩虹',
     '柳絮空缱绻',
     '南风知不知',
@@ -27,8 +29,6 @@ var words=[
     '人生自是有情痴',
     '此恨不关风与月',
     '因为你，我多少适应了这个世界',
-    '春蚕到死丝方尽',
-    '蜡炬成灰泪始干',
     '今夜何夕',
     '见此良人',
     '愿我如星君如月',
@@ -102,7 +102,7 @@ let textone = document.querySelector('.textone').querySelector('h1');
       let textthree = document.querySelector('.textthree').querySelector('h1');
 
       setTimeout(function(){
-        textone.innerHTML = '今晚，整片星空将为你一人闪烁';
+        textone.innerHTML = '茜茜，今晚的整片星空将为你一人闪烁';
           textone.style.color = '#E8F9FD';
           textone.style.fontFamily = '楷体'
           texttwo.style.color = '#E8F9FD';
