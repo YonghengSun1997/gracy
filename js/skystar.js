@@ -67,16 +67,39 @@ let textone = document.querySelector('.textone').querySelector('h1');
       setTimeout(function(){
         textone.innerHTML = '茜茜，今晚的整片星空将为你一人闪烁';
           textone.style.color = '#E8F9FD';
-          textone.style.fontFamily = '楷体'
-          texttwo.style.color = '#E8F9FD';
-          texttwo.style.fontFamily = '楷体'
-          textthree.style.color = '#E8F9FD';
-          textthree.style.fontFamily = '楷体'
+          textone.style.fontFamily = '楷体';
           texttwo.innerHTML = '';
       },28000)
       setTimeout(function(){
+        textone.innerHTML = '从前从前，有个人爱你很久';
+        textone.style.color = '#E8F9FD';
+          textone.style.fontFamily = '楷体';
+          texttwo.innerHTML = '';
+      },60000)
+      setTimeout(function(){
+        textone.innerHTML = '但偏偏，风渐渐';
+        textone.style.color = '#E8F9FD';
+          textone.style.fontFamily = '楷体';
+          texttwo.innerHTML = '';
+      },80000)
+      setTimeout(function(){
+        textone.innerHTML = '把距离吹得好远';
+        textone.style.color = '#E8F9FD';
+          textone.style.fontFamily = '楷体';
+          texttwo.innerHTML = '';
+      },100000)
+      setTimeout(function(){
         textone.innerHTML = '要一直好好的';
-      },112500)
+        textone.style.color = '#E8F9FD';
+          textone.style.fontFamily = '楷体';
+          texttwo.innerHTML = '';
+      },120000)
+      setTimeout(function(){
+        textone.innerHTML = '茜茜，生日快乐';
+        textone.style.color = '#E8F9FD';
+          textone.style.fontFamily = '楷体';
+          texttwo.innerHTML = '';
+      },140000)
 
 
  
