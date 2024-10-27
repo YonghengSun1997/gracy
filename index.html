@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+修改代码，左上角增加视频播放按钮，点击播放video/skystar.mp4：<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -12,19 +12,6 @@
             position: fixed;
             top: 20px;
             right: 20px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 30px;
-            color: #E8F9FD;
-            outline: none;
-        }
-
-        /* 视频播放按钮样式 */
-        #video-button {
-            position: fixed;
-            top: 20px;
-            left: 20px;
             background: none;
             border: none;
             cursor: pointer;
@@ -50,11 +37,14 @@
     </style>
 </head>
 <body>
-    <video id="videofilm" poster="img/skystar3.jpg" muted loop>
+    <video id="videofilm" poster="img/skystar3.jpg" autoplay muted loop>
         <source src="video/skystar.mp4" type="video/mp4">
     </video>
     <div class="textone">
         <h1>look at the stars</h1>
+    </div>
+    <div class="textthree">
+        <h1></h1>
     </div>
     <div class="texttwo">
         <h1>look how they shine for u</h1>
@@ -67,9 +57,7 @@
 
     <!-- 音符图标按钮 -->
     <button id="play-button">🎵</button>
-    <!-- 视频播放按钮 -->
-    <button id="video-button">▶️</button>
-
+    
     <div class="container"></div>
     <script src="js/skystar.js"></script>
 
@@ -83,18 +71,6 @@
             } else {
                 audio.pause();
                 this.classList.remove('rotate'); // 停止旋转效果
-            }
-        });
-
-        // 点击视频按钮，控制视频播放和暂停
-        document.getElementById('video-button').addEventListener('click', function() {
-            const video = document.getElementById('videofilm');
-            if (video.paused) {
-                video.play();
-                this.innerHTML = '⏸️'; // 更改按钮图标为暂停
-            } else {
-                video.pause();
-                this.innerHTML = '▶️'; // 更改按钮图标为播放
             }
         });
     </script>
