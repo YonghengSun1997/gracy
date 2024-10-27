@@ -6,6 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>茜茜，今晚的整片星空将为你一人闪烁</title>
     <link rel="stylesheet" href="css/skystar.css">
+    <style>
+        /* 音符按钮样式 */
+        #play-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 30px;
+            color: #E8F9FD;
+            outline: none;
+            transition: transform 0.3s ease;
+        }
+
+        /* 音符旋转效果 */
+        #play-button.rotate {
+            transform: rotate(360deg);
+        }
+    </style>
 </head>
 <body>
     <video id="videofilm" poster="img/skystar2.jpg" autoplay muted loop>
@@ -23,16 +43,23 @@
     
     <audio id="audio" src="video/晴天.mp3" loop></audio>
 
-    <button id="play-button">播放音乐</button>
+    <!-- 音符图标按钮 -->
+    <button id="play-button">🎵</button>
     
     <div class="container"></div>
     <script src="js/skystar.js"></script>
 
     <script>
-        // 等待用户交互后播放音频
+        // 播放音乐并旋转音符按钮
         document.getElementById('play-button').addEventListener('click', function() {
             const audio = document.getElementById('audio');
-            audio.play();
+            if (audio.paused) {
+                audio.play();
+                this.classList.add('rotate'); // 添加旋转效果
+            } else {
+                audio.pause();
+                this.classList.remove('rotate'); // 取消旋转效果
+            }
         });
     </script>
 </body>
