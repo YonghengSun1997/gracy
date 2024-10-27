@@ -114,8 +114,12 @@ let textone = document.querySelector('.textone').querySelector('h1');
       },28000)
       setTimeout(function(){
         textone.innerHTML = '从前从前,有个人爱你很久';
-        texttwo.innerHTML = '但偏偏，风渐渐';
-        textthree.innerHTML = '把距离吹的好远';
+      },112500)
+      setTimeout(function(){
+        textone.innerHTML = '茜茜,生日快乐';
+      },112500)
+      setTimeout(function(){
+        textone.innerHTML = '茜茜,要一直好好的';
       },112500)
 
 
