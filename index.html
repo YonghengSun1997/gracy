@@ -34,12 +34,32 @@
         #play-button.rotate {
             animation: spin 2s linear infinite;
         }
+
+        /* 视频样式 */
+        #videofilm {
+            position: absolute; /* 绝对定位 */
+            top: 0; /* 放在顶部 */
+            left: 0; /* 放在左侧 */
+            width: 100%; /* 充满父元素 */
+            height: 100%; /* 充满父元素 */
+            object-fit: cover; /* 保持比例填充 */
+            z-index: 1; /* 设置层叠顺序，确保在图片上面 */
+        }
+
+        /* 图片样式 */
+        .poster {
+            position: relative; /* 相对定位，作为视频的定位基础 */
+            z-index: 0; /* 确保图片在视频下方 */
+        }
     </style>
 </head>
 <body>
-<video id="videofilm" poster="img/skystar3.jpg" autoplay muted loop>
-    <source src="video/skystar.mp4" type="video/mp4">
-</video>
+    <div class="poster">
+        <video id="videofilm" poster="img/skystar3.jpg" autoplay muted loop>
+            <source src="video/skystar.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
     <div class="textone">
         <h1>茜茜，生日快乐</h1>
     </div>
